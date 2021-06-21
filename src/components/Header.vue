@@ -1,58 +1,67 @@
 <template>
-  <header>
-      <div class="info-bar">
-          <div class="container flex-spbt-centre">
-            <!-- opening times -->
-            <div class="nav-opening-times">
-                <i class="fas fa-clock"></i>
-                <span>
-                  Open Hours: {{ openingTimes }}
-                </span>
+    <header>
+        <div class="info-bar">
+            <div class="container flex-spbt-centre">
+                <!-- opening times -->
+                <div class="nav-opening-times">
+                    <i class="fas fa-clock"></i>
+                    <span>
+                    Open Hours: {{ openingTimes }}
+                    </span>
+                </div>
+                <!-- /opening times -->
+
+                <!-- contacts -->
+                <ul class="nav-contacts list-inline">
+                    <!-- phone number -->
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>{{ phone }}</span>
+                    </li>
+                    <!-- /phone number -->
+
+                    <!-- mail -->
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>{{ contactMail }}</span>
+                    </li>
+                    <!-- /mail -->
+
+                    <!-- social contacts -->
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <!-- /social contacts -->
+                </ul>
+                <!-- /contacts -->
             </div>
-            <!-- /opening times -->
+        </div>
 
-            <!-- contacts -->
-            <ul class="nav-contacts list-inline">
-                <!-- phone number -->
-                <li>
-                    <i class="fas fa-phone-alt"></i>
-                    <span>{{ phone }}</span>
-                </li>
-                <!-- /phone number -->
+        <div id="hero">
+            <Nav 
+            :navLinks="navLinks" />
 
-                <!-- mail -->
-                <li>
-                    <i class="fas fa-envelope"></i>
-                    <span>{{ contactMail }}</span>
-                </li>
-                <!-- /mail -->
+            <img src="../assets/images/bg-parallax.png" alt="">
 
-                <!-- social contacts -->
-                <li>
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </li>
-                <!-- /social contacts -->
-            </ul>
-            <!-- /contacts -->
+            <div class="jumbotron-title">
+                
+            </div>
+
+        </div>    
 
 
-          </div>
-      </div>
-
-      <Nav 
-      :navLinks="navLinks" />
       
   </header>
 </template>
@@ -103,7 +112,7 @@ export default {
 @import '../style/variables.scss';
 
 header {
-    height: 100px;
+    height: 100vh;
 
     .info-bar {
         height: 40px;
@@ -119,7 +128,7 @@ header {
 
         .nav-contacts {
             & > li {
-                margin: 0 15px;
+                margin: 0 10px;
 
                 i {
                     margin: 0 5px;
@@ -128,6 +137,16 @@ header {
         }
     }
     
+    #hero {
+        height: calc(100% - 40px);
+        background-color: lightcyan;
+
+        img {
+            height: 100%;
+            width: 110%;
+            object-fit: cover;
+        }
+    }
 }
 
 </style>

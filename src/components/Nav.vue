@@ -16,6 +16,14 @@
                         {{ link.name }}
                     </a>
                 </li>
+
+                <!-- get in touch button -->
+                <li class="btn">
+                    <a href="#">
+                        get in touch
+                    </a>
+                </li>
+                <!-- /get in touch button -->
             </ul>
         </div>
     </nav>
@@ -36,26 +44,28 @@ export default {
 @import '../style/variables.scss';
 
     nav {
-        height: calc(100% - 30px);
+        position: absolute;
+        width: 100%;
+        height: 70px;
         color: $gravel;
         display: flex;
         align-items: center;
-        background-color: green;
+        background-color: transparent;
 
         img {
-            height: 40px;
+            height: 30px;
+        }
+
+        a {
+                text-transform: uppercase;    
+                color: $gravel;
+                margin: 0 10px;
+                padding: 5px;
         }
 
         .navbar {
             font-size: 14px;
-            font-weight: 600;
-
-            a {
-                text-transform: uppercase;    
-                color: $gravel;
-                margin: 0 10px;
-                padding: 10px 15px;
-            }
+            font-weight: 600;            
         }
     }
 

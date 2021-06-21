@@ -14,7 +14,7 @@ body {
 
 
 .container {
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -33,5 +33,15 @@ body {
 
     a {
         text-decoration: none;
+    }
+}
+
+.btn {
+    padding: 10px 5px;
+    border-radius: 3px;
+    background-color: $blueLagoon;
+
+    a {
+        color: $white;
     }
 }
