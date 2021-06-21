@@ -41,11 +41,13 @@ body {
     color:$blueLagoon;
     padding: 5px 15px;
     background-color: #d5e7e8;
+    border-radius: 5px;
 }
 
 h1 {
     font-size: 55px;
     color: $bigStone;
+    font-weight: 900;
 }
 
 h2 {
@@ -88,7 +90,7 @@ p {
 }
 
 .btn-secondary {
-    background-color: $white;
+    background-color: transparent;
     border: 1px solid $blueLagoon;
 
     a {

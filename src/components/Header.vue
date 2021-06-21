@@ -94,11 +94,11 @@ export default {
                 },
                 {
                     name: "Services",
-                    url: ""
+                    url: "#services"
                 },
                 {
                     name: "About",
-                    url: ""
+                    url: "#company"
                 },
                 {
                     name: "Projects",
