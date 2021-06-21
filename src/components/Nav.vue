@@ -5,7 +5,7 @@
             <!-- logo image -->
             <div class="image-logo">
                 <a href="#">
-                    <img src="../assets/logo.png" alt="NexGen Logo">
+                    <img src="../assets/svgs/svg-7.svg" alt="NexGen Logo">
                 </a>
             </div>
             <!-- /logo image -->

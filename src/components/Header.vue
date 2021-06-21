@@ -191,14 +191,9 @@ header {
                 margin: 0 15px;
             }
 
-            h1 {
-                font-size: 55px;
-            }
-
             p {
                 color: $gravel;
                 padding: 25px;
-                margin: 0 0;
             }
         }
     }
