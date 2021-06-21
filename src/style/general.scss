@@ -1,5 +1,8 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~@fontsource/montserrat/index.css";
+@import "~@fontsource/montserrat/500.css";
+@import "~@fontsource/montserrat/900.css";
+
 @import "./variables.scss";
 
 * {
@@ -18,12 +21,6 @@ body {
     margin: 0 auto;
 }
 
-.flex-spbt-centre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .list-inline {
     list-style: none;
 
@@ -37,11 +34,37 @@ body {
 }
 
 .btn {
-    padding: 10px 5px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 15px;
     border-radius: 3px;
+    text-transform: uppercase;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.btn-primary {
     background-color: $blueLagoon;
+    border: 1px solid $blueLagoon;
 
     a {
         color: $white;
     }
+}
+
+.btn-secondary {
+    background-color: $white;
+    border: 1px solid $blueLagoon;
+
+    a {
+        color: $blueLagoon;
+    }
+}
+
+.span-highlight {
+    color:$blueLagoon;
+    padding: 5px 15px;
+    background-color: #d5e7e8;
 }

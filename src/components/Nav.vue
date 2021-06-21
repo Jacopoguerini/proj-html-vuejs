@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="container flex-spbt-centre">
+        <div class="container">
 
             <!-- logo image -->
             <div class="image-logo">
@@ -10,21 +10,23 @@
             </div>
             <!-- /logo image -->
 
-            <ul class="navbar list-inline">
-                <li v-for="link in navLinks" :key="link.name">
-                    <a :href="link.url">
-                        {{ link.name }}
-                    </a>
-                </li>
+            <div class="nav-right">
+                <ul class="navbar list-inline">
+                    <li v-for="link in navLinks" :key="link.name">
+                        <a :href="link.url">
+                            {{ link.name }}
+                        </a>
+                    </li>
+                </ul>
 
                 <!-- get in touch button -->
-                <li class="btn">
+                <span class="btn btn-primary">
                     <a href="#">
                         get in touch
                     </a>
-                </li>
+                </span>
                 <!-- /get in touch button -->
-            </ul>
+            </div>
         </div>
     </nav>
 </template>
@@ -51,21 +53,39 @@ export default {
         display: flex;
         align-items: center;
         background-color: transparent;
+        z-index: 999;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-right {
+                & > * {
+                    display: inline-block;
+                }
+
+                ul {
+                    li {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
 
         img {
             height: 30px;
         }
 
         a {
-                text-transform: uppercase;    
-                color: $gravel;
-                margin: 0 10px;
-                padding: 5px;
+            text-transform: uppercase;    
+            color: $gravel;
+            padding: 5px;
         }
 
         .navbar {
             font-size: 14px;
-            font-weight: 600;            
+            font-weight: 500;            
         }
     }
 
