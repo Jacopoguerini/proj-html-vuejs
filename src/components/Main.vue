@@ -81,6 +81,36 @@
         <Projects 
         :projects="projects"/>
         <!-- /Projects -->
+
+        <!-- Results -->
+        <div class="numbers">
+            <section id="results">
+                <div class="container">
+                    <h5>what we are doing</h5>
+                    <h2><span class="span-highlight">Results</span> in Numbers</h2>
+                    <ul class="data">
+                        <li v-for="(result, index) in results" :key="index">
+                            <h4>{{result. number}}</h4>
+                            <h5>{{ result.name }}</h5>
+
+                        </li>
+                    </ul>
+
+                    <div class="partner-logos">
+                        <ul class="logo-list">
+                            <li v-for="(partner, index) in partners" :key="index">
+                                <img :src="partner.logoUrl" :alt="partner.name">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+        </div>
+        <!-- /Results -->
   </main>
 </template>
 
@@ -165,6 +195,56 @@ export default {
                     title: "Confraternization to the procurement team",
                     backgroundPath: require("../assets/images/project-6.jpg") 
                 }                   
+            ],
+            results: [                
+                {
+                    name: "Certifications",
+                    number: 128
+                },
+                {
+                    name: "Employees",
+                    number: 230
+                },
+                {
+                    name: "Customers",
+                    number: 517
+                },   
+                {
+                    name: "Countries Served",
+                    number: 94
+                }                           
+            ],
+            partners: [
+                {
+                    name: "jQuery",
+                    logoUrl: require('../assets/images/logo-4.png'),
+                    url: ""
+                },
+                {
+                    name: "less",                    
+                    logoUrl: require('../assets/images/logo-5.png'),
+                    url: ""
+                },
+                {
+                    name: "WooCommerce",                    
+                    logoUrl: require('../assets/images/logo-1.png'),
+                    url: ""
+                },
+                {
+                    name: "WordPress",                    
+                    logoUrl: require('../assets/images/logo-2.png'),
+                    url: ""
+                },
+                {
+                    name: "Pingdom",
+                    logoUrl: require('../assets/images/logo-3.png'),
+                    url: ""
+                },
+                {
+                    name: "jQuery",
+                    logoUrl: require('../assets/images/logo-4.png'),
+                    url: ""
+                }                                                                  
             ]
         }
     }
@@ -263,6 +343,77 @@ export default {
         .bullets#bottom {
             bottom: -25px;
         }
+    }
+
+    #results {
+        text-align: center;
+        padding: 100px 0;
+        padding-bottom: 300px;
+        position: relative;
+
+        h2 {
+            color: $white;
+            margin-bottom: 100px;
+        }
+        .span-highlight {
+            color: $white;
+            background-color: rgba(3, 132, 132, 0.2);
+        }
+
+        .data {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            & > li {
+                display: inline-block;
+
+                h4 {
+                    color: $elm;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    color: $white;
+                    text-transform: none;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .partner-logos {
+            background-color: $shark;
+            padding: 70px 0;
+            height: 200px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo-list {
+                list-style: none;   
+                display: flex;          
+
+                li {
+                    height: 20px;
+
+                    img {
+                        filter: invert(60%);
+                        height: 100%;
+                        margin: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+    .numbers {
+        background-image: url("../assets/images/bg-7.jpg");
+        background-size: cover;
+        background-position: center;
     }
 
 </style>
