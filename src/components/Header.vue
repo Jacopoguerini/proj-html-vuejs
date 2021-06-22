@@ -6,7 +6,7 @@
                 <div class="nav-opening-times">
                     <i class="fas fa-clock"></i>
                     <span>
-                    Open Hours: {{ openingTimes }}
+                    Open Hours: {{ contacts.openingTimes }}
                     </span>
                 </div>
                 <!-- /opening times -->
@@ -16,14 +16,14 @@
                     <!-- phone number -->
                     <li>
                         <i class="fas fa-phone-alt"></i>
-                        <span>{{ phone }}</span>
+                        <span>{{ contacts.phone }}</span>
                     </li>
                     <!-- /phone number -->
 
                     <!-- mail -->
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <span>{{ contactMail }}</span>
+                        <span>{{ contacts.contactMail }}</span>
                     </li>
                     <!-- /mail -->
 
@@ -61,7 +61,7 @@
                     
                     <div class="buttons">
                         <span class="btn btn-primary">
-                            <a href="#">
+                            <a href="#contacts">
                             get in touch
                             </a>
                         </span>
@@ -84,9 +84,6 @@ export default {
     name: "Header",
     data: function() {
         return {
-            openingTimes: "Mon - Sat - 9:00 - 18:00",
-            phone: "+1 (305) 1234-5678" ,
-            contactMail: "Hello@example.com",
             navLinks: [
                 {
                     name: "Home",
@@ -113,6 +110,9 @@ export default {
     },
     components: {
         Nav
+    },
+    props: {
+        "contacts": Object
     }
 
 }

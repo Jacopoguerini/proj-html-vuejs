@@ -83,7 +83,7 @@
         <!-- /Projects -->
 
         <!-- Results -->
-        <div class="numbers">
+        <section class="numbers">
             <section id="results">
                 <div class="container">
                     <h5>what we are doing</h5>
@@ -107,10 +107,62 @@
 
 
             </section>
-
-
-        </div>
+        </section>
         <!-- /Results -->
+
+        <section id="contacts">
+            <div class="container">
+                <div class="form">
+                    <h5>send a message</h5>
+                    <h2>Get in <span class="span-highlight">Touch</span></h2>
+                    <p>We will respond to your message as soon as possible.</p>
+                    <form>
+                        
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                        <select name="More Info" id="">
+                            <option value="">More info</option>
+                            <option value="1">Info 1</option>
+                            <option value="2">Info 2</option>
+                            <option value="3">Info 3</option>                                                        
+                            <option value="4">Info 4</option>                            
+                        </select>
+                        <textarea type="text" placeholder="Message" rows="7"></textarea>
+
+                        <button class="btn btn-primary">
+                            send
+                        </button>
+                    </form>
+                </div>
+                <div class="contacts">
+                    <h3>Example Inc.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Odit optio doloribus nesciunt commodi eligendi.</p>
+
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>{{ contacts.phone }}</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>{{ contacts.contactMail }}</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>{{ contacts.address }}</span>
+                        </li>
+                    </ul>
+
+                    <a class="btn btn-secondary">
+                        view map
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
   </main>
 </template>
 
@@ -123,6 +175,9 @@ export default {
     components: {
         Services,
         Projects
+    },
+    props: {
+        "contacts": Object
     },
     data: function() {
         return {
@@ -361,7 +416,6 @@ export default {
         }
 
         .data {
-            list-style: none;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -394,8 +448,7 @@ export default {
             align-items: center;
             justify-content: center;
 
-            .logo-list {
-                list-style: none;   
+            .logo-list {  
                 display: flex;          
 
                 li {
@@ -411,9 +464,102 @@ export default {
         }
     }
     .numbers {
+        padding: 0 0;
         background-image: url("../assets/images/bg-7.jpg");
         background-size: cover;
         background-position: center;
+    }
+
+    #contacts {
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .form {
+                width: 60%;
+
+                form {
+                    margin-top: 50px;
+                }
+
+                input,
+                select,
+                textarea {
+                    outline: none;
+                    background-color: rgba(188, 190, 188, 0.4);
+                    border-radius: 3px;  
+                    border: none;
+                    padding: 10px;
+                }
+
+                input,
+                select {
+                    width: calc(50% - 5px);
+                    margin-bottom: 10px;         
+                }
+                input[type="email"],
+                select {
+                    margin-left: 10px;
+                }
+
+                textarea {
+                    resize: none;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                input::placeholder,
+                select,
+                textarea::placeholder {
+                    font-family: "Montserrat";
+                    color: $gravel;
+                }
+
+                button {
+                    font-size: 12px;
+                    padding: 10px 20px;
+                }
+            }
+
+            .contacts {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3,
+                p {
+                    margin-bottom: 25px; 
+                }
+
+                .info-list {
+                    margin-bottom: 20px;
+                
+                    li {
+                        margin-bottom: 20px;
+                        i {
+                            color: $blueLagoon;
+                            padding: 10px;
+                            border-radius: 50%;
+                            background-color: #d5e7e8;
+                            margin-right: 10px;
+                        }
+                        span {
+                            color: $blueLagoon;
+                        }
+                    }
+                }
+            }
+        }
+
+        h2,
+        h3 {
+            color: $bigStone;
+        }
+        p {
+            color: $gravel;
+        }
     }
 
 </style>

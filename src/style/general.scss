@@ -67,11 +67,15 @@ p {
 }
 
 section {
-    padding: 70px 0;
+    padding: 100px 0;
 
     h2 {
         margin: 25px 0;
     }
+}
+
+ul {
+    list-style: none;
 }
 
 // buttons
@@ -81,6 +85,7 @@ section {
     font-size: 14px;
     border-radius: 3px;
     text-transform: uppercase;
+    cursor: pointer;
 
     a {
         padding: 10px 15px;
@@ -89,6 +94,7 @@ section {
 }
 
 .btn-primary {
+    color: $white;
     background-color: $blueLagoon;
     border: 1px solid $blueLagoon;
 
@@ -99,6 +105,7 @@ section {
 }
 
 .btn-secondary {
+    color: $blueLagoon;
     background-color: transparent;
     border: 1px solid $blueLagoon;
 

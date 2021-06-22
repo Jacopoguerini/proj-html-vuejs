@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     
-    <Header />
+    <Header 
+    :contacts="contacts"/>
 
-    <Main />
+    <Main
+    :contacts="contacts"/>
 
   </div>
 </template>
@@ -14,6 +16,16 @@ import Main from './components/Main';
 
 export default {
   name: 'App',
+  data: function() {
+    return {
+      contacts: {
+        openingTimes: "Mon - Sat - 9:00 - 18:00",
+        phone: "+1 (305) 1234-5678" ,
+        contactMail: "hello@example.com",
+        address: "Main Avenue, 987"
+      }
+    }
+  },
   components: {
     Header,
     Main
