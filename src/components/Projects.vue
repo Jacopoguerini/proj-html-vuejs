@@ -20,9 +20,12 @@
             </ul>
 
             <div class="projects-list">
+
                 <div class="project"
                 v-for="(project, index) in selectedProjects"
-                :key="index">
+                :key="index"
+                :style="{ backgroundImage: 'url(' + project.backgroundPath + ')' }">
+                    <div class="layover"></div>
                     <h4>{{ project.title }}</h4>
                 </div>
             </div>
@@ -47,6 +50,7 @@ export default {
         selectAll: function() {
             this.activeIndex = undefined;
             this.selectedProjects = this.projects;
+            document.getElementById("projects").scrollIntoView();
         },
         selectProject: function(newIndex) {
             this.activeIndex = newIndex;
@@ -71,7 +75,7 @@ export default {
 @import '../style/variables.scss';
 
     #projects {
-
+        min-height: 100vh;
         padding: 100px 0;
 
         h2 {
@@ -84,13 +88,14 @@ export default {
 
         .list-inline {
             text-align: center;
+            margin-bottom: 20px;
 
             li {
                 text-transform: uppercase;
                 cursor: pointer;
-                margin: 0 15px;
+                margin: 0 10px;
                 padding: 8px;
-                font-size: 14px;
+                font-size: 12px;
                 color: $gravel;
                 font-weight: 500;
             }
@@ -108,9 +113,26 @@ export default {
         }
 
         .project {
-            width: calc(33% - 10px);
-            height: 200px;
+            width: calc((100% / 3) - 20px);
+            height: 280px;
+            padding: 35px 20px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: $greyNurse;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: cover;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            
+            & > * {
+                z-index: 2;
+            }
         }
+
     }
 
 </style>
