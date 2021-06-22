@@ -130,29 +130,32 @@ export default {
             ],
             projects: [
                 {
-                    sector: "All"
-                },
-                {
+                    id: 1,
                     sector: "Institutional",
                     title: "Academic professional program in social media"
                 },
                 {
+                    id: 2,
                     sector: "Social",
                     title: "President's speech at annual meeting"
                 },
                 {
+                    id: 3,                    
                     sector: "Events",
                     title: "International business trip in Shanghai"
                 },
                 {
+                    id: 4,                    
                     sector: "Innovation",
                     title: "Technology workshop with education team"
                 },                   
                 {
+                    id: 5,                    
                     sector: "Environment",
                     title: "Donation of clothes and food to the partner NGO"
                 },                    
                 {
+                    id: 6,                    
                     sector: "Technology",
                     title: "Confraternization to the procurement team"
                 }                   

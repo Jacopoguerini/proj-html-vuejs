@@ -6,17 +6,22 @@
 
             <ul class="list-inline">
                 <li
+                :class="(activeIndex == undefined) ? 'active' : ''"
+                @click="selectAll()">
+                    All
+                </li>
+                <li
                 v-for="(project, index) in projects"
                 :key="index"
                 :class="(index == activeIndex) ? 'active' : ''"
-                @click="setActive(index)">
+                @click="selectProject(index)">
                     {{ project.sector }}
                 </li>
             </ul>
 
             <div class="projects-list">
                 <div class="project"
-                v-for="(project, index) in projects"
+                v-for="(project, index) in selectedProjects"
                 :key="index">
                     <h4>{{ project.title }}</h4>
                 </div>
@@ -34,14 +39,28 @@ export default {
     },
     data: function() {
         return {
-            active: true,
-            activeIndex: 0
+            activeIndex: undefined,
+            selectedProjects: this.projects
         }
     },
     methods: {
-        setActive: function(newIndex) {
-            this.activeIndex = newIndex;
+        selectAll: function() {
+            this.activeIndex = undefined;
+            this.selectedProjects = this.projects;
         },
+        selectProject: function(newIndex) {
+            this.activeIndex = newIndex;
+            this.filterProjects();       
+        },
+        filterProjects: function() {
+            this.selectedProjects = this.projects.filter(element => {
+                if (this.activeIndex != undefined) {
+                    return element.id == (this.activeIndex + 1);
+                }
+            });
+        }
+
+        
     }
 
 }
@@ -81,7 +100,17 @@ export default {
             }
         }
 
-        .project
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .project {
+            width: calc(33% - 10px);
+            height: 200px;
+        }
     }
 
 </style>
