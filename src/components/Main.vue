@@ -20,7 +20,6 @@
 
                     <div class="list">
                         <div>
-
                             <span>
                                 <i class="fas fa-award"></i>
                                 <h4>Tradition</h4>
@@ -41,7 +40,6 @@
                                 <i class="far fa-edit"></i>
                                 <h4>Certificate</h4>
                             </span>
-                            
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
 
@@ -86,6 +84,7 @@
         <section class="numbers">
             <section id="results">
                 <div class="container">
+                    
                     <h5>what we are doing</h5>
                     <h2><span class="span-highlight">Results</span> in Numbers</h2>
                     <ul class="data">
@@ -113,6 +112,7 @@
         <section id="contacts">
             <div class="container">
                 <div class="form">
+
                     <h5>send a message</h5>
                     <h2>Get in <span class="span-highlight">Touch</span></h2>
                     <p>We will respond to your message as soon as possible.</p>
@@ -136,6 +136,7 @@
                     </form>
                 </div>
                 <div class="contacts">
+
                     <h3>Example Inc.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <p>Odit optio doloribus nesciunt commodi eligendi.</p>

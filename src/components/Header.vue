@@ -55,6 +55,7 @@
 
             <div class="image-layer">
                 <div class="jumbotron-title">
+                    
                     <h1>Ready <span class="span-highlight">Team</span></h1>
                     
                     <p>No matter what your company needs, we will be ready to assist you in the best possible way</p>
