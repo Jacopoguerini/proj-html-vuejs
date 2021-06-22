@@ -21,7 +21,7 @@
 
                 <!-- get in touch button -->
                 <span class="btn btn-primary">
-                    <a href="#">
+                    <a href="#contacts">
                         get in touch
                     </a>
                 </span>

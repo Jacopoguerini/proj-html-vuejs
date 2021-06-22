@@ -7,12 +7,16 @@
     <Main
     :contacts="contacts"/>
 
+    <Footer 
+    :contacts="contacts"/>
+
   </div>
 </template>
 
 <script>
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
@@ -28,13 +32,14 @@ export default {
   },
   components: {
     Header,
-    Main
+    Main,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
-@import './style/general.scss'
+@import './style/general.scss';
 
 
 </style>

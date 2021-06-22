@@ -109,6 +109,7 @@
         </section>
         <!-- /Results -->
 
+        <!-- Contacts -->
         <section id="contacts">
             <div class="container">
                 <div class="form">
@@ -162,7 +163,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- /Contacts -->
 
   </main>
 </template>
