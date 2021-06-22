@@ -1,65 +1,8 @@
 <template>
   <main>
         <!-- Services -->
-        <section id="services">
-            <div class="container">
-                <h5>our business areas</h5>
-                <h2>Excellence in <span class="span-highlight">Services</span></h2>
-                <div class="subtitle">
-                    <p>We are leaders in providing consultancy with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.</p>
-                    <span class="btn btn-primary">
-                        <a href="#">see all</a>
-                    </span>
-                </div>
-
-                <div class="services-container">
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-1.svg" alt="">
-                        <h3>Audit & Assurance</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-2.svg" alt="">
-                        <h3>Financial Advisory</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-3.svg" alt="">
-                        <h3>Analytics and M&A</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-4.svg" alt="">
-                        <h3>Middle Marketing</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-5.svg" alt="">
-                        <h3>Legal Consulting</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <div class="service">
-                        <img src="../assets/svgs/svg-6.svg" alt="">
-                        <h3>Regulatory Risk</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-        
-                </div>
-
-            </div>
-        </section>
+        <Services 
+        :services="services"/>
         <!-- /Services -->
 
         <!-- the Company -->
@@ -133,85 +76,95 @@
             <img src="../assets/images/about-4.jpg" alt="">
         </section>
         <!-- /the Company -->
+
+        <!-- Projects -->
+        <Projects 
+        :projects="projects"/>
+        <!-- /Projects -->
   </main>
 </template>
 
 <script>
+import Services from './ServicesList';
+import Projects from './Projects';
 
 export default {
-    name: "Main"
+    name: "Main",
+    components: {
+        Services,
+        Projects
+    },
+    data: function() {
+        return {
+            services: [
+                {
+                    name: "Audit & Assurance",
+                    path: require("../assets/svgs/svg-1.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    name: "Financial Advisory",
+                    path: require("../assets/svgs/svg-2.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    name: "Analytics & M&A",
+                    path: require("../assets/svgs/svg-3.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    name: "Middle Marketing",
+                    path: require("../assets/svgs/svg-4.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    name: "Legal Consulting",
+                    path: require("../assets/svgs/svg-5.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },  
+                {
+                    name: "Regulatory Risk",
+                    path: require("../assets/svgs/svg-6.svg"),
+                    summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                }
+            ],
+            projects: [
+                {
+                    sector: "All"
+                },
+                {
+                    sector: "Institutional",
+                    title: "Academic professional program in social media"
+                },
+                {
+                    sector: "Social",
+                    title: "President's speech at annual meeting"
+                },
+                {
+                    sector: "Events",
+                    title: "International business trip in Shanghai"
+                },
+                {
+                    sector: "Innovation",
+                    title: "Technology workshop with education team"
+                },                   
+                {
+                    sector: "Environment",
+                    title: "Donation of clothes and food to the partner NGO"
+                },                    
+                {
+                    sector: "Technology",
+                    title: "Confraternization to the procurement team"
+                }                   
+            ]
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../style/general.scss';
 @import '../style/variables.scss';
-
-    section {
-        padding: 70px 0;
-
-        h2 {
-            margin: 25px 0;
-        }
-    }
-
-    #services {
-        background-color: $greyNurse;
-
-        h2 {
-            color: $bigStone;
-        }
-
-        .subtitle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        h3 {
-            color: $shark;
-            font-weight: 700;
-            margin: 20px 0;
-        }
-
-        p {
-            color: $gravel;
-            display: inline-block;
-            width: 75%;
-        }
-
-            .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-        }
-
-        .service {
-            width: 32%;
-            background-color: $white;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 10px;
-            position: relative;
-
-            img {
-                width: 30px;
-            }
-
-            i {
-                position: absolute;
-                color: $blueLagoon;
-                opacity: 0.6;
-                font-size: 20px;
-                top: 50px;
-                right: 30px;
-                transform: translate(-50%, -50%);
-                cursor: pointer;
-            }
-        }
-
-    }
 
     #company {
         color: $pumice;

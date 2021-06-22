@@ -90,7 +90,7 @@ export default {
             navLinks: [
                 {
                     name: "Home",
-                    url: ""
+                    url: "#"
                 },
                 {
                     name: "Services",
@@ -102,7 +102,7 @@ export default {
                 },
                 {
                     name: "Projects",
-                    url: ""
+                    url: "#projects"
                 },
                 {
                     name: "Results",
@@ -156,7 +156,7 @@ header {
     
     #hero {
         height: calc(100% - 40px);
-        background-color: lightcyan;
+        background-color: $white;
 
         .image-layer {
             height: 100%;

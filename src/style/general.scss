@@ -66,15 +66,24 @@ p {
     font-size: 14px;
 }
 
+section {
+    padding: 70px 0;
+
+    h2 {
+        margin: 25px 0;
+    }
+}
+
 // buttons
 .btn {
+    padding: 10px 15px;
     font-weight: 500;
     font-size: 14px;
-    padding: 10px 15px;
     border-radius: 3px;
     text-transform: uppercase;
 
     a {
+        padding: 10px 15px;
         text-decoration: none;
     }
 }
