@@ -53,7 +53,7 @@ export default {
         display: flex;
         align-items: center;
         background-color: transparent;
-        z-index: 999;
+        z-index: 1001;
 
         .container {
             display: flex;

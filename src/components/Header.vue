@@ -83,6 +83,19 @@
                     <div class="slider-dot"></div>                    
                 </div>
             </div>
+
+            <div class="wrapper">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
         </div>    
   </header>
 </template>
@@ -105,6 +118,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/general.scss';
 @import '../style/variables.scss';
+@import '../style/animated-background.scss';
 
 header {
     height: 100vh;
@@ -147,6 +161,7 @@ header {
     #hero {
         height: calc(100% - 40px);
         background-color: $white;
+        position: relative;
 
         .image-layer {
             height: 100%;
@@ -157,6 +172,7 @@ header {
             background-position: center;
             background-size: 190%;
             background-repeat: no-repeat;
+            z-index: 1000;
 
             .slider{
                 position: absolute;
