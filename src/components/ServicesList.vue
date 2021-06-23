@@ -19,7 +19,9 @@
                     <img :src="service.path" alt="">
                     <h3>{{ service.name }}</h3>
                     <p>{{ service.summary }}</p>
-                    <i class="fas fa-arrow-right"></i>
+                    <a href="#">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
@@ -90,10 +92,18 @@ export default {
                     color: $blueLagoon;
                     opacity: 0.6;
                     font-size: 20px;
-                    top: 50px;
-                    right: 30px;
+                    top: 35px;
+                    right: 5px;
                     transform: translate(-50%, -50%);
                     cursor: pointer;
+                    padding: 5px;
+                    transition: opacity 0.1s, background-color 0.1s, border-radius 0.1s;
+
+                    &:hover {
+                        opacity: 1;
+                        background-color: $fountainBlue;
+                        border-radius: 50%;
+                    }
                 }
             }
 

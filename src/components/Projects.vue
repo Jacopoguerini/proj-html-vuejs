@@ -20,13 +20,26 @@
             </ul>
 
             <div class="projects-list">
-
-                <div class="project"
+                <div class="project flip-card"
                 v-for="(project, index) in selectedProjects"
-                :key="index"
-                :style="{ backgroundImage: 'url(' + project.backgroundPath + ')' }">
-                    <div class="layover"></div>
-                    <h4>{{ project.title }}</h4>
+                :key="index">
+                    <div class="flip-card-inner">
+                        <div
+                        class="flip-card-front"
+                        :style="{ backgroundImage: 'url(' + project.backgroundPath + ')' }">
+                            <div class="layover"></div>
+                            <h4>{{ project.title }}</h4>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="layover"
+                            :style="{ backgroundImage: 'url(' + project.backgroundPath + ')' }"></div>
+                            <h4>{{ project.title }}</h4>
+                            <h6>{{ project.summary }}</h6>
+                            <a href="#">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +86,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/general.scss';
 @import '../style/variables.scss';
+@import '../style/flipcard.scss';
 
     #projects {
         min-height: 100vh;
@@ -115,21 +129,53 @@ export default {
         .project {
             width: calc((100% / 3) - 20px);
             height: 280px;
-            padding: 35px 20px;
             margin: 10px;
             text-align: center;
             font-size: 18px;
             color: $greyNurse;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background-size: cover;
             overflow: hidden;
             border-radius: 10px;
             position: relative;
-            
-            & > * {
-                z-index: 2;
+
+            h4 {
+                margin-bottom: 35px;
+            }
+
+            h6 {
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
+
+            a {
+                position: absolute;
+                top: 30px;
+                right: 35px;
+                color: $white;
+            }
+
+            h4, h6, a {
+                z-index: 3;
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                border-radius: 10px;
+                padding: 0 15px;
+                background-size: cover;
+            }
+            .flip-card-back {
+                h4 {
+                    margin-bottom: 0;
+                }
+
+                .layover {
+                    filter: blur(5px);
+                    background-size: cover;
+                    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6)
+                }
             }
         }
 
