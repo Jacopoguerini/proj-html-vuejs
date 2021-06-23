@@ -527,6 +527,11 @@ export default {
                 select {
                     margin-left: 10px;
                 }
+                input[type="text"] {
+                    background-image: url('../assets/images/image (1).png');
+                    background-repeat: no-repeat;
+                    background-position: 97%;
+                }
 
                 textarea {
                     resize: none;
