@@ -1,10 +1,10 @@
 <template>
     <footer>
         <FooterColumns
+        :contacts="contacts"
         :about="about"
         :services="services"
-        :support="support"
-        :contacts="contacts" />
+        :support="support" />
 
         <div class="footer-bar">
             <div class="container">
@@ -24,89 +24,10 @@ export default {
         FooterColumns
     },
     props: {
-        "contacts": Object
-    },
-    data: function() {
-        return {
-            about: [
-                {
-                    name: "The Company",
-                    url: "#company"
-                },
-                {
-                    name: "Institutional",
-                    url: "#projects"
-                },
-                {
-                    name: "Social & Events",
-                    url: "#projects"
-                },
-                {
-                    name: "Innovation",
-                    url: "#projects"
-                },
-                {
-                    name: "Environment",
-                    url: "#projects"
-                },
-                {
-                    name: "Technology",
-                    url: "#projects"
-                }                
-            ],
-            services: [
-                {
-                    name: "Audit & Assurance",
-                    url: "#services"
-                },
-                {
-                    name: "Financial Advisory",
-                    url: "#services"
-                },
-                {
-                    name: "Analytics and M&A",
-                    url: "#services"
-                },
-                {
-                    name: "Middle Marketing",
-                    url: "#services"
-                },
-                {
-                    name: "Legal Consulting",
-                    url: "#services"
-                },
-                {
-                    name: "Regiulatory Risk",
-                    url: "#services"
-                }
-            ],
-            support: [
-                {
-                    name: "Responsibility",
-                    url: ""
-                },
-                {
-                    name: "Terms of Use",
-                    url: ""
-                },
-                {
-                    name: "About Cookies",
-                    url: ""
-                },
-                {
-                    name: "Privacy Policy",
-                    url: ""
-                },
-                {
-                    name: "Accessibility",
-                    url: ""
-                },
-                {
-                    name: "Information",
-                    url: ""
-                }
-            ]
-        }
+        "contacts": Object,
+        "about": Array,
+        "services": Array,
+        "support": Array
     }
 }
 </script>

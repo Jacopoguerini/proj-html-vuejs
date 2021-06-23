@@ -83,37 +83,12 @@ import Nav from './Nav';
 
 export default {
     name: "Header",
-    data: function() {
-        return {
-            navLinks: [
-                {
-                    name: "Home",
-                    url: "#"
-                },
-                {
-                    name: "Services",
-                    url: "#services"
-                },
-                {
-                    name: "About",
-                    url: "#company"
-                },
-                {
-                    name: "Projects",
-                    url: "#projects"
-                },
-                {
-                    name: "Results",
-                    url: "#results"
-                }
-            ]
-        }
-    },
     components: {
         Nav
     },
     props: {
-        "contacts": Object
+        "contacts": Object,
+        "navLinks": Array
     }
 
 }

@@ -68,10 +68,10 @@
 export default {
     name: "FooterColumns",
     props: {
+        "contacts": Object,
         "about": Array,
         "services": Array,
-        "support": Array,
-        "contacts": Object
+        "support": Array
     }
 }
 </script>
