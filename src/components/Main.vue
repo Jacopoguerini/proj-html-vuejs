@@ -20,7 +20,7 @@
 
                     <div class="list">
                         <div>
-                            <span>
+                            <span class="about-title">
                                 <i class="fas fa-award"></i>
                                 <h4>Tradition</h4>
                             </span>
@@ -28,15 +28,15 @@
                         </div>
 
                         <div>
-                            <span>
+                            <span class="about-title">
                                 <i class="fas fa-lock"></i>
-                                <h4>Tradition</h4>
+                                <h4>Security</h4>
                             </span>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
 
                         <div>
-                            <span>
+                            <span class="about-title">
                                 <i class="far fa-edit"></i>
                                 <h4>Certificate</h4>
                             </span>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div>
-                            <span>
+                            <span class="about-title">
                                 <i class="fas fa-graduation-cap"></i>
                                 <h4>Expertise</h4>
                             </span>
@@ -399,6 +399,12 @@ export default {
                     margin-left: 0;
                 }
             }
+
+            .about-title {
+                display: flex;
+                align-items: center;
+            }
+        
         }
 
         .bullets {

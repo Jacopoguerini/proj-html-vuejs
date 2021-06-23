@@ -16,9 +16,10 @@
 
             <div class="services-container">
                 <div class="service" v-for="(service, index) in services" :key="index">
-                    <img :src="service.path" alt="">
+                    <img :src="service.path" alt="">                    
                     <h3>{{ service.name }}</h3>
                     <p>{{ service.summary }}</p>
+
                     <a href="#">
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -78,7 +79,7 @@ export default {
             .service {
                 width: 32%;
                 background-color: $white;
-                padding: 30px;
+                padding: 40px 30px;
                 margin: 20px 0;
                 border-radius: 10px;
                 position: relative;
@@ -95,17 +96,19 @@ export default {
                     width: 30px;
                 }
 
-                i {
+                a {
                     position: absolute;
-                    color: $blueLagoon;
-                    opacity: 0.6;
-                    font-size: 20px;
-                    top: 35px;
-                    right: 5px;
+                    top: 50px;
+                    right: 10px;
                     transform: translate(-50%, -50%);
-                    cursor: pointer;
-                    padding: 5px;
-                    transition: opacity 0.2s, background-color 0.2s, border-radius 0.2s;
+
+                    i {
+                        color: $blueLagoon;
+                        opacity: 0.6;
+                        font-size: 20px;
+                        padding: 10px;
+                        transition:border-radius 0.3s, opacity 0.3s, background-color 0.3s;
+                    }
                 }
             }
 
