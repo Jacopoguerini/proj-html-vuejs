@@ -68,6 +68,10 @@ export default {
                 ul {
                     li {
                         margin: 0 10px;
+
+                        a:hover {
+                            color: $pumice;
+                        }
                     }
                 }
             }
