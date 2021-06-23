@@ -68,10 +68,10 @@ export default {
                 width: 75%;
             }
 
-                .services-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+            .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
             }
 
@@ -82,6 +82,14 @@ export default {
                 margin: 20px 0;
                 border-radius: 10px;
                 position: relative;
+
+                &:hover {
+                    i {
+                        opacity: 1;
+                        background-color: $fountainBlue;
+                        border-radius: 50%;
+                    }
+                }
 
                 img {
                     width: 30px;
@@ -97,13 +105,7 @@ export default {
                     transform: translate(-50%, -50%);
                     cursor: pointer;
                     padding: 5px;
-                    transition: opacity 0.1s, background-color 0.1s, border-radius 0.1s;
-
-                    &:hover {
-                        opacity: 1;
-                        background-color: $fountainBlue;
-                        border-radius: 50%;
-                    }
+                    transition: opacity 0.2s, background-color 0.2s, border-radius 0.2s;
                 }
             }
 
