@@ -36,7 +36,7 @@ export default {
       navLinks: [
         {
             name: "Home",
-            url: "#"
+            url: "#home"
         },
         {
             name: "Services",

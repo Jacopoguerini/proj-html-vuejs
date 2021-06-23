@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header id="home">
         <div class="info-bar">
             <div class="container">
                 <!-- opening times -->

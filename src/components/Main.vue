@@ -1,5 +1,5 @@
 <template>
-  <main>
+    <main>
         <!-- Services -->
         <Services 
         :services="services"/>
@@ -157,15 +157,22 @@
                         </li>
                     </ul>
 
-                    <a class="btn btn-secondary">
+                    <a class="btn btn-secondary" @click="showMap()">
                         view map
                     </a>
+
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.186268079908!2d-74.13503908472748!3d40.86778627931521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fecf01cf914d%3A0x3ee97a91f650bf73!2s897%20Main%20Ave%2C%20Passaic%2C%20NJ%2007055%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1624432585511!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        
+                        <div class="close-map" @click="closeMap()">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- /Contacts -->
-
-  </main>
+    </main>
 </template>
 
 <script>
@@ -309,6 +316,15 @@ export default {
                     url: ""
                 }                                                                  
             ]
+        }
+    },
+    methods: {
+        showMap: function() {
+            document.getElementById('map').style.display = "block";
+            document.getElementById('contacts').scrollIntoView();
+        },
+        closeMap: function() {
+            document.getElementById('map').style.display = "none";            
         }
     }
 }
@@ -479,6 +495,7 @@ export default {
     }
 
     #contacts {
+        position: relative;
 
         .container {
             display: flex;
@@ -567,6 +584,33 @@ export default {
         }
         p {
             color: $gravel;
+        }
+
+        #map {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px $shark;
+
+            .close-map {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: -12px;
+                right: -12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                color: $white;
+                background-color: $gravel;
+                border-radius: 50%;
+                box-shadow: 0 0 10px $shark;
+                cursor: pointer;
+                border: 3px solid $white;
+            }
         }
     }
 
