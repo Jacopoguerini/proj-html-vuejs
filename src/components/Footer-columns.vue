@@ -25,18 +25,42 @@
                 </a>
             </span>
         </div>
-        
-        <div class="footer-col">
 
+        <!-- about -->
+        <div class="footer-col list">
+            <h4>About</h4>
+            <ul>
+                <li v-for="(item, index) in about" :key="index">
+                    <i class="fas fa-chevron-right"></i>
+                    <a :href="item.url">{{ item.name }}</a>
+                </li>
+            </ul>
         </div>
+        <!-- /about -->
 
-        <div class="footer-col">
-
+        <!-- services -->
+        <div class="footer-col list">
+            <h4>Services</h4>
+            <ul>
+                <li v-for="(item, index) in services" :key="index">
+                    <i class="fas fa-chevron-right"></i>
+                    <a :href="item.url">{{ item.name }}</a>
+                </li>
+            </ul>
         </div>
+        <!-- /services -->
 
-        <div class="footer-col">
-
+        <!-- support -->
+        <div class="footer-col list">
+            <h4>Support</h4>
+            <ul>
+                <li v-for="(item, index) in support" :key="index">
+                    <i class="fas fa-chevron-right"></i>
+                    <a :href="item.url">{{ item.name }}</a>
+                </li>
+            </ul>
         </div>
+        <!-- /support -->
     </section>
 </template>
 
@@ -56,38 +80,81 @@ export default {
 @import '../style/general.scss';
 @import '../style/variables.scss';
 
-    .footer-col {
-        font-size: 12px;
+
+    .container {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: stretch;
+        
 
-        p {
-            margin: 20px 0;
-        }
+        .footer-col {
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
-        ul {
-            margin-bottom: 20px;
+            p {
+                margin: 20px 0;
+            }
 
-            li {
-                margin-bottom: 15px;
+            ul {
+                margin-bottom: 20px;
 
-                i {
-                    margin-right: 10px;
+                li {
+                    margin-bottom: 15px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            img {
+                height: 40px;
+            }
+
+            .btn {
+                padding:  8px 0;
+
+                a {
+                    color: $white;
+                    font-size: 12px;
                 }
             }
         }
 
-        img {
-            height: 40px;
-        }
+        .list {
+            background-color: rgba(80, 79, 81, 0.2);
+            justify-content: center;
+            border-radius: 10px;
+            padding-left: 25px;
+            
+            ul {
+                margin-bottom: 0;
 
-        .btn {
-            padding:  8px 0;
+                li {
+                    margin-bottom: 10px;
 
-            a {
+                    i {
+                        margin-right: 10px;
+                        color: $pumice;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $pumice;
+                        font-size: 13px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            h4 {
+                margin-bottom: 20px;
+                font-size: 20px;
                 color: $white;
-                font-size: 12px;
             }
         }
     }
