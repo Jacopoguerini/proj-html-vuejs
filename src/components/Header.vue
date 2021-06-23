@@ -123,6 +123,12 @@ header {
             & > li {
                 margin: 0 10px;
 
+                &:hover {
+                    a {
+                        color: $white;
+                    }
+                }
+
                 i {
                     margin: 0 5px;
                 }
