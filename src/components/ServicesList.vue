@@ -45,72 +45,71 @@ export default {
 @import '../style/variables.scss';
 
     #services {
-            background-color: $greyNurse;
+        background-color: $greyNurse;
 
-            h2 {
-                color: $bigStone;
-            }
+        h2 {
+            color: $bigStone;
+        }
 
-            .subtitle {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            h3 {
-                color: $bigStone;
-                font-weight: 700;
-                margin: 20px 0;
-            }
-
-            p {
-                color: $gravel;
-                display: inline-block;
-                width: 75%;
-            }
-
-            .services-container {
+        .subtitle {
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: space-between;
+        }
 
-            }
+        h3 {
+            color: $bigStone;
+            font-weight: 700;
+            margin: 20px 0;
+        }
 
-            .service {
-                width: 32%;
-                background-color: $white;
-                padding: 40px 30px;
-                margin: 20px 0;
-                border-radius: 10px;
-                position: relative;
+        p {
+            color: $gravel;
+            display: inline-block;
+            width: 75%;
+        }
 
-                &:hover {
-                    i {
-                        opacity: 1;
-                        background-color: $fountainBlue;
-                        border-radius: 50%;
-                    }
-                }
+        .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-                img {
-                    width: 30px;
-                }
+        }
 
-                a {
-                    position: absolute;
-                    top: 50px;
-                    right: 10px;
-                    transform: translate(-50%, -50%);
+        .service {
+            width: 32%;
+            background-color: $white;
+            padding: 40px 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            position: relative;
 
-                    i {
-                        color: $blueLagoon;
-                        opacity: 0.6;
-                        font-size: 20px;
-                        padding: 10px;
-                        transition:border-radius 0.3s, opacity 0.3s, background-color 0.3s;
-                    }
+            &:hover {
+                i {
+                    opacity: 1;
+                    background-color: $fountainBlue;
+                    border-radius: 50%;
                 }
             }
 
+            img {
+                width: 30px;
+            }
+
+            a {
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                transform: translate(-50%, -50%);
+
+                i {
+                    color: $blueLagoon;
+                    opacity: 0.6;
+                    font-size: 20px;
+                    padding: 10px;
+                    transition:border-radius 0.3s, opacity 0.3s, background-color 0.3s;
+                }
+            }
+        }
     }
 </style>

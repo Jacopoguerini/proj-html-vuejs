@@ -120,119 +120,119 @@ export default {
 @import '../style/variables.scss';
 @import '../style/animated-background.scss';
 
-header {
-    height: 100vh;
+    header {
+        height: 100vh;
 
-    .info-bar {
-        height: 40px;
-        background-color: $bigStone;
-        color: $pumice;
-        display: flex;
-        align-items: center;
-        font-size: 11px;
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        a {
+        .info-bar {
+            height: 40px;
+            background-color: $bigStone;
             color: $pumice;
-        }
+            display: flex;
+            align-items: center;
+            font-size: 11px;
 
-        .nav-contacts {
-            & > li {
-                margin: 0 10px;
-
-                &:hover {
-                    a {
-                        color: $white;
-                    }
-                }
-
-                i {
-                    margin: 0 5px;
-                }
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
-        }
-    }
-    
-    #hero {
-        height: calc(100% - 40px);
-        background-color: $white;
-        position: relative;
 
-        .image-layer {
-            height: 100%;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            background-image: url("../assets/images/bg-parallax.png");
-            background-position: center;
-            background-size: 190%;
-            background-repeat: no-repeat;
-            z-index: 1000;
+            a {
+                color: $pumice;
+            }
 
-            .slider{
-                position: absolute;
-                height: auto;
-                width: auto;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                margin-right: 25px;
-                
-                .slider-dot{
-                    height: 25px;
-                    width: 7px;
-                    border-radius: 5px;
-                    background-color: transparent;
-                    margin: 5px;
-                    border: 1px solid $elm;
-                    cursor: pointer;
+            .nav-contacts {
+                & > li {
+                    margin: 0 10px;
 
                     &:hover {
-                        background-color: $fountainBlue;
+                        a {
+                            color: $white;
+                        }
+                    }
+
+                    i {
+                        margin: 0 5px;
                     }
                 }
+            }
+        }
+        
+        #hero {
+            height: calc(100% - 40px);
+            background-color: $white;
+            position: relative;
 
-                .active {
-                    background-color: $elm;
+            .image-layer {
+                height: 100%;
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+                background-image: url("../assets/images/bg-parallax.png");
+                background-position: center;
+                background-size: 190%;
+                background-repeat: no-repeat;
+                z-index: 1000;
+
+                .slider{
+                    position: absolute;
+                    height: auto;
+                    width: auto;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    margin-right: 25px;
+                    
+                    .slider-dot{
+                        height: 25px;
+                        width: 7px;
+                        border-radius: 5px;
+                        background-color: transparent;
+                        margin: 5px;
+                        border: 1px solid $elm;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $fountainBlue;
+                        }
+                    }
+
+                    .active {
+                        background-color: $elm;
+                    }
+
                 }
 
             }
 
-        }
+            .jumbotron-title {
+                text-align: center;
+                width: 30%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
-        .jumbotron-title {
-            text-align: center;
-            width: 30%;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+                & > * {
+                    margin: 10px 0;
+                }
 
-            & > * {
-                margin: 10px 0;
-            }
+                .btn,
+                .btn-secondary {
+                    margin: 0 15px;
+                }
 
-            .btn,
-            .btn-secondary {
-                margin: 0 15px;
-            }
-
-            p {
-                color: $gravel;
-                padding: 25px;
+                p {
+                    color: $gravel;
+                    padding: 25px;
+                }
             }
         }
     }
-}
 
 </style>

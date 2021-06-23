@@ -75,11 +75,8 @@ export default {
                     return element.id == (this.activeIndex + 1);
                 }
             });
-        }
-
-        
+        }   
     }
-
 }
 </script>
 
