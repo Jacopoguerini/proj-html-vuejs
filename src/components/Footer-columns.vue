@@ -80,7 +80,6 @@ export default {
 @import '../style/general.scss';
 @import '../style/variables.scss';
 
-
     .container {
         display: flex;
         justify-content: space-between;
