@@ -73,6 +73,15 @@
                         </span>
                     </div>
                 </div>
+
+                <div class="slider">
+                    <!-- <div class="slider-dot"
+                    v-for="(div, index) in 3"
+                    :key="index"></div> -->
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>                    
+                </div>
             </div>
         </div>    
   </header>
@@ -90,7 +99,6 @@ export default {
         "contacts": Object,
         "navLinks": Array
     }
-
 }
 </script>
 
@@ -149,6 +157,36 @@ header {
             background-position: center;
             background-size: 190%;
             background-repeat: no-repeat;
+
+            .slider{
+                position: absolute;
+                height: auto;
+                width: auto;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                margin-right: 25px;
+                
+                .slider-dot{
+                    height: 25px;
+                    width: 7px;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    margin: 5px;
+                    border: 1px solid $elm;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $fountainBlue;
+                    }
+                }
+
+                .active {
+                    background-color: $elm;
+                }
+
+            }
+
         }
 
         .jumbotron-title {
